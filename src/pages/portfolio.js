@@ -34,7 +34,7 @@ const PortfolioPage = () => {
     ];
 
     const filteredItems =
-        selectedTech === 'Alla'
+        selectedTech === 'All'
             ? items
             : items.filter((item) => item.techStack?.includes(selectedTech));
 
