@@ -45,47 +45,54 @@ const Page = ({ data }) => {
                 )}
                 {page.slug === 'contact' && (
                     <section className="contact-section">
-                        {submitted ? (
-                            <p>Tack! Ditt meddelande har skickats.</p>
-                        ) : (
-                            <form
-                                name="contact"
-                                method="POST"
-                                data-netlify="true"
-                                netlify-honeypot="bot-field"
-                                className="contact-form"
-                            >
-                                <input
-                                    type="hidden"
-                                    name="form-name"
-                                    value="contact"
-                                />
+                        <form
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
+                            netlify-honeypot="bot-field"
+                            className="contact-form"
+                        >
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="contact"
+                            />
 
-                                <p hidden>
-                                    <label>
-                                        Don’t fill this out:{' '}
-                                        <input name="bot-field" />
-                                    </label>
-                                </p>
-
+                            <p hidden>
                                 <label>
-                                    Namn:
-                                    <input type="text" name="name" required />
+                                    Don’t fill this out:{' '}
+                                    <input name="bot-field" />
                                 </label>
+                            </p>
 
-                                <label>
-                                    Email:
-                                    <input type="email" name="email" required />
-                                </label>
+                            <label htmlFor="name">Namn:</label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                required
+                                placeholder="Skriv ditt namn här"
+                            />
 
-                                <label>
-                                    Meddelande:
-                                    <textarea name="message" required />
-                                </label>
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="Skriv din email"
+                            />
 
-                                <button type="submit">Skicka</button>
-                            </form>
-                        )}
+                            <label htmlFor="message">Meddelande:</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                placeholder="Skriv ditt meddelande"
+                            />
+
+                            <button type="submit">Skicka</button>
+                        </form>
                     </section>
                 )}
             </section>
