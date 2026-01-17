@@ -12,8 +12,8 @@ const NotFound = ({ data }) => {
 
     return (
         <Layout>
-            <div className="page-container">
-                {/* Bild */}
+            <section className="page-container">
+
                 {image && (
                     <GatsbyImage
                         image={image}
@@ -22,10 +22,10 @@ const NotFound = ({ data }) => {
                     />
                 )}
 
-                {/* Titel */}
+
                 <h1 className="page-title">{title || 'Sidan hittades inte'}</h1>
 
-                {/* Body */}
+
                 {body && (
                     <div className="page-body">
                         {documentToReactComponents(
@@ -34,11 +34,10 @@ const NotFound = ({ data }) => {
                     </div>
                 )}
 
-                {/* Länk tillbaka till startsidan */}
                 <div className="home-link">
-                    <Link to="/">Till startsidan</Link>
+                    <Link to="/">Back to home</Link>
                 </div>
-            </div>
+            </section>
         </Layout>
     );
 };
@@ -59,4 +58,4 @@ export const query = graphql`
 `;
 
 export default NotFound;
-export const Head = () => <title>Sidan hittades inte</title>;
+export const Head = () => <title>Sorry, page not found</title>;

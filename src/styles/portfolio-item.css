@@ -1,4 +1,3 @@
-/* Portfolio Item Page */
 .portfolio-item-page {
   max-width: 900px;
   margin: 2rem auto;
@@ -30,17 +29,18 @@
 
 .portfolio-item-page .techstack {
   margin-bottom: 2rem;
-  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
   color: #c392f0;
+  font-weight: lighter;
 }
 
 .portfolio-item-page .project-description {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   line-height: 1.8;
   color: #e0c8ff;
 }
 
-/* Responsivt */
 @media (max-width: 600px) {
   .portfolio-item-page {
     padding: 1rem;

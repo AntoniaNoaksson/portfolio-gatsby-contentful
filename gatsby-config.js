@@ -6,11 +6,10 @@ require('dotenv').config();
 
 module.exports = {
     siteMetadata: {
-        title: `My Portfolio`,
-        siteUrl: `https://example.com`
+        title: `Antonia Noaksson – Frontend Developer Portfolio`,
+        siteUrl: `https://antonianoakssonportfolio.netlify.app`
     },
     plugins: [
-        // Hämtar innehåll från Contentful (Headless CMS)
         {
             resolve: `gatsby-source-contentful`,
             options: {
@@ -18,24 +17,15 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
             }
         },
-
-    
-        // Genererar sitemap.xml för SEO
         {
             resolve: `gatsby-plugin-sitemap`
         },
-
-        // React Helmet för bättra SEO
         {
             resolve: `gatsby-plugin-react-helmet`
         },
-
-        // Bildhantering och optimering
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
-
-        // CSS-styling via PostCSS
         `gatsby-plugin-postcss`
     ]
 };

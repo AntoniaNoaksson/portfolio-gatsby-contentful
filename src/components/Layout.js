@@ -58,13 +58,13 @@ export default Layout;
 
 export const Head = () => (
     <>
-        <html lang="sv" />
+        <html lang="en" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Min Portfolio</title>
+        <title>Antonia Noaksson – Portfolio</title>
         <meta
             name="description"
-            content="Välkommen till min portfolio – här visas mina projekt och erfarenheter."
+            content="Welcome to my portfolio — a collection of my projects and experience."
         />
     </>
 );

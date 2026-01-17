@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-container">
+            <section className="footer-container">
                 <div className="footer-logo">
                     <Link to="/portfolio">Antonia Noaksson</Link>
                     <StaticImage
@@ -15,10 +15,10 @@ const Footer = () => {
                     />
                 </div>
 
-                <p className="footer-description">
+                <section className="footer-description">
                     I’m a junior frontend developer who enjoys building modern,
                     accessible, and user-friendly web solutions.
-                </p>
+                </section>
 
                 <ul className="footer-links">
                     <li>
@@ -26,7 +26,7 @@ const Footer = () => {
                             href="https://github.com/AntoniaNoaksson"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Gå till min GitHub-profil"
+                            aria-label="Go to my GitHub-profile"
                         >
                             GitHub
                         </a>
@@ -36,7 +36,7 @@ const Footer = () => {
                             href="https://www.linkedin.com/in/antonia-noaksson-20ba132b1/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Gå till min LinkedIn-profil"
+                            aria-label="Go to my LinkedIn-profile"
                         >
                             LinkedIn
                         </a>
@@ -50,7 +50,7 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Antonia Noaksson. Alla
                     rättigheter förbehållna.
                 </div>
-            </div>
+            </section>
         </footer>
     );
 };

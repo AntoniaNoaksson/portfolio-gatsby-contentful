@@ -90,7 +90,7 @@ const PortfolioPage = () => {
                                     to={`/portfolio/${item.slug}`}
                                     className="read-more-btn"
                                 >
-                                    Läs mer här
+                                    View project
                                 </Link>
                             </section>
                         );

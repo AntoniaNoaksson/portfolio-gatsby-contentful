@@ -67,7 +67,6 @@ header {
     color: #e6e6e6;
     padding: 3rem 1rem;
     border-top: 4px solid #7c3aed;
-    font-family: 'Arial', sans-serif;
 }
 
 .footer-container {
@@ -77,16 +76,13 @@ header {
     grid-template-columns: auto 1fr auto;
     gap: 3rem;
     align-items: start;
-
     justify-items: stretch;
 }
 .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     gap: 0.5rem;
-    margin-left: 0;
 }
 .footer-logo a {
     color: antiquewhite;
@@ -94,13 +90,7 @@ header {
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 0.5rem;
-    transition: color 0.3s ease;
 }
-
-.footer-logo a:hover {
-    color: #d8b4fe;
-}
-
 .footer-description {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -130,7 +120,6 @@ header {
 
 .footer-links li a:hover {
     color: #d8b4fe;
-    transform: translateY(-2px);
 }
 
 .footer-copyright {

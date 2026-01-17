@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import Layout from '../components/Layout';
-import '../styles/portfolio-item.css'; 
+import '../styles/portfolio-item.css';
 
 const PortfolioItem = ({ data }) => {
     const project = data.contentfulProject;
@@ -13,7 +13,7 @@ const PortfolioItem = ({ data }) => {
 
     return (
         <Layout>
-            <div className="portfolio-item-page">
+            <section className="portfolio-item-page">
                 <h1>{project.title}</h1>
 
                 {thumbnailImage && (
@@ -38,9 +38,9 @@ const PortfolioItem = ({ data }) => {
                     </div>
                 )}
                 <Link to="/portfolio/" className="read-more-btn">
-                   ← Gå tillbaka
+                    ← Go back
                 </Link>
-            </div>
+            </section>
         </Layout>
     );
 };

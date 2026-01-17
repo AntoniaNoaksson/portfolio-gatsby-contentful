@@ -103,12 +103,13 @@
 .read-more-btn {
     display: inline-block;
     margin-top: auto;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     background-color: #975cc7;
     color: white;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .portfolio-item:hover {
@@ -181,7 +182,6 @@
     }
 }
 
-/* Responsive: Mobil */
 @media (max-width: 600px) {
     .portfolio-container-wrapper {
         display: flex;

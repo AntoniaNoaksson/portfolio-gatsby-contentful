@@ -65,13 +65,13 @@ const Page = ({ data }) => {
                                 </label>
                             </p>
 
-                            <label htmlFor="name">Namn:</label>
+                            <label htmlFor="name">Name:</label>
                             <input
                                 id="name"
                                 type="text"
                                 name="name"
                                 required
-                                placeholder="Skriv ditt namn här"
+                                placeholder="Enter your name here"
                             />
 
                             <label htmlFor="email">Email:</label>
@@ -80,18 +80,18 @@ const Page = ({ data }) => {
                                 type="email"
                                 name="email"
                                 required
-                                placeholder="Skriv din email"
+                                placeholder="Enter your email address"
                             />
 
-                            <label htmlFor="message">Meddelande:</label>
+                            <label htmlFor="message">Message:</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
-                                placeholder="Skriv ditt meddelande"
+                                placeholder="Enter your message"
                             />
 
-                            <button type="submit">Skicka</button>
+                            <button type="submit">Send</button>
                         </form>
                     </section>
                 )}

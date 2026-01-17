@@ -13,15 +13,13 @@ const ContactLink = () => {
     if (!data?.contentfulPage) return null;
 
     return (
-        <p>
-            <Link
-                to={`/${data.contentfulPage.slug}`}
-                aria-label="Gå till kontaktsidan"
-                className="read-more-btn"
-            >
-               Contact me here
-            </Link>
-        </p>
+        <Link
+            to={`/${data.contentfulPage.slug}`}
+            aria-label="Go to the contact page"
+            className="read-more-btn"
+        >
+            Contact me here
+        </Link>
     );
 };
 
