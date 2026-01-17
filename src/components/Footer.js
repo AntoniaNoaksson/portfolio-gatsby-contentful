@@ -16,8 +16,8 @@ const Footer = () => {
                 </div>
 
                 <p className="footer-description">
-                    Vill du komma i kontakt? Skicka ett mejl eller kolla mina
-                    sociala medier!
+                    I’m a junior frontend developer who enjoys building modern,
+                    accessible, and user-friendly web solutions.
                 </p>
 
                 <ul className="footer-links">
@@ -42,7 +42,7 @@ const Footer = () => {
                         </a>
                     </li>
                     <li>
-                        <Link to="/contact">Kontaktformulär</Link>
+                        <Link to="/contact">Contact me</Link>
                     </li>
                 </ul>
 

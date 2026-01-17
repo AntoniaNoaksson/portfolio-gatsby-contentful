@@ -19,7 +19,7 @@ const ContactLink = () => {
                 aria-label="Gå till kontaktsidan"
                 className="read-more-btn"
             >
-                Kontakta mig gärna om du vill veta mer om mig eller mitt arbete.
+               Contact me here
             </Link>
         </p>
     );
