@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
 const PortfolioPage = () => {
-    const [selectedTech, setSelectedTech] = React.useState('Alla');
+    const [selectedTech, setSelectedTech] = React.useState('All Projects');
 
     const data = useStaticQuery(graphql`
         query {
@@ -29,12 +29,12 @@ const PortfolioPage = () => {
     const items = data.allContentfulProject.nodes;
 
     const techOptions = [
-        'Alla',
+        'All Projects',
         ...new Set(items.flatMap((item) => item.techStack || []))
     ];
 
     const filteredItems =
-        selectedTech === 'All'
+        selectedTech === 'All Projects'
             ? items
             : items.filter((item) => item.techStack?.includes(selectedTech));
 
