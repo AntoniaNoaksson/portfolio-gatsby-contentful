@@ -1,0 +1,57 @@
+/* Portfolio Item Page */
+.portfolio-item-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2f2f3b;
+  color: #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-item-page h1 {
+  font-size: 2.5rem;
+  color: #975cc7;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-item-page .page-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.portfolio-item-page .techstack {
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  color: #c392f0;
+}
+
+.portfolio-item-page .project-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e0c8ff;
+}
+
+/* Responsivt */
+@media (max-width: 600px) {
+  .portfolio-item-page {
+    padding: 1rem;
+  }
+
+  .portfolio-item-page h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-item-page .techstack,
+  .portfolio-item-page .project-description {
+    font-size: 1rem;
+  }
+}

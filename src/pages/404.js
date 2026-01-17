@@ -1,49 +1,62 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Layout from '../components/Layout';
+import '../styles/index.css';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const NotFound = ({ data }) => {
+    const { title, body, img } = data.contentfulPage || {};
+    const image = img ? getImage(img) : null;
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+    return (
+        <Layout>
+            <div className="page-container">
+                {/* Bild */}
+                {image && (
+                    <GatsbyImage
+                        image={image}
+                        alt={title}
+                        className="page-image"
+                    />
+                )}
 
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+                {/* Titel */}
+                <h1 className="page-title">{title || 'Sidan hittades inte'}</h1>
 
-export default NotFoundPage
+                {/* Body */}
+                {body && (
+                    <div className="page-body">
+                        {documentToReactComponents(
+                            body.raw ? JSON.parse(body.raw) : body
+                        )}
+                    </div>
+                )}
 
-export const Head = () => <title>Not found</title>
+                {/* Länk tillbaka till startsidan */}
+                <div className="home-link">
+                    <Link to="/">Till startsidan</Link>
+                </div>
+            </div>
+        </Layout>
+    );
+};
+
+export const query = graphql`
+    query {
+        contentfulPage(slug: { eq: "404" }) {
+            title
+            body {
+                raw
+            }
+            img {
+                gatsbyImageData(layout: CONSTRAINED, width: 600)
+                title
+            }
+        }
+    }
+`;
+
+export default NotFound;
+export const Head = () => <title>Sidan hittades inte</title>;
