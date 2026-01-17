@@ -53,7 +53,6 @@ const Page = ({ data }) => {
                                 method="POST"
                                 data-netlify="true"
                                 netlify-honeypot="bot-field"
-                                onSubmit={() => setSubmitted(true)}
                                 className="contact-form"
                             >
                                 <input
