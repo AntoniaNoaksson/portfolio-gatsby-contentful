@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Page = ({ data }) => {
     const page = data.contentfulPage;
+    const [submitted, setSubmitted] = useState(false);
 
     if (!page) {
         return (
@@ -29,7 +30,7 @@ const Page = ({ data }) => {
 
     return (
         <Layout>
-            <main className="page-container">
+            <section className="page-container">
                 {image && (
                     <GatsbyImage
                         image={image}
@@ -42,7 +43,53 @@ const Page = ({ data }) => {
                         {renderRichText(page.body)}
                     </section>
                 )}
-            </main>
+                {page.slug === 'contact' && (
+                    <section className="contact-section">
+                        {submitted ? (
+                            <p>Tack! Ditt meddelande har skickats.</p>
+                        ) : (
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                                onSubmit={() => setSubmitted(true)}
+                                className="contact-form"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="contact"
+                                />
+
+                                <p hidden>
+                                    <label>
+                                        Don’t fill this out:{' '}
+                                        <input name="bot-field" />
+                                    </label>
+                                </p>
+
+                                <label>
+                                    Namn:
+                                    <input type="text" name="name" required />
+                                </label>
+
+                                <label>
+                                    Email:
+                                    <input type="email" name="email" required />
+                                </label>
+
+                                <label>
+                                    Meddelande:
+                                    <textarea name="message" required />
+                                </label>
+
+                                <button type="submit">Skicka</button>
+                            </form>
+                        )}
+                    </section>
+                )}
+            </section>
         </Layout>
     );
 };
@@ -77,8 +124,10 @@ export const query = graphql`
         }
     }
 `;
+
 export const Head = ({ data }) => {
     if (data.contentfulPage.slug === 'portfolio') {
         return <title>Portfolio</title>;
     }
+    return <title>{data.contentfulPage.title}</title>;
 };

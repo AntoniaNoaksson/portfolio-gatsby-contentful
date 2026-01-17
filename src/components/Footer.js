@@ -11,7 +11,6 @@ const Footer = () => {
                     <StaticImage
                         src="../images/footerlogo.png"
                         alt="Footer logo"
-                        className="footer-logo-image"
                         width={150}
                     />
                 </div>
@@ -24,18 +23,20 @@ const Footer = () => {
                 <ul className="footer-links">
                     <li>
                         <a
-                            href="https://github.com/username"
+                            href="https://github.com/AntoniaNoaksson"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Gå till min GitHub-profil"
                         >
                             GitHub
                         </a>
                     </li>
                     <li>
                         <a
-                            href="https://linkedin.com/in/username"
+                            href="https://www.linkedin.com/in/antonia-noaksson-20ba132b1/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Gå till min LinkedIn-profil"
                         >
                             LinkedIn
                         </a>
