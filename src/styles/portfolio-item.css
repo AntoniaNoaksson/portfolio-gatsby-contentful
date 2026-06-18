@@ -1,4 +1,4 @@
-.portfolio-item-page {
+/* .portfolio-item-page {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
@@ -54,4 +54,54 @@
   .portfolio-item-page .project-description {
     font-size: 1rem;
   }
+} */
+.portfolio-item-page {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    color: #f5f5f7;
+}
+
+.portfolio-item-page h1 {
+    max-width: 820px;
+    margin: 0 auto 2rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #f5f5f7;
+    text-align: center;
+}
+
+.portfolio-item-page .page-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 24px;
+    margin: 0 auto 2.5rem;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-item-page .techstack {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    color: #d8b4fe;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.portfolio-item-page .project-description {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #b8b8c7;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .portfolio-item-page {
+        padding: 3rem 1rem;
+    }
 }
