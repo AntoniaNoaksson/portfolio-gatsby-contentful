@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Layout from '../components/Layout';
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
+import * as React from 'react';
+import Layout from '../components/Layout';
 
 const PortfolioPage = () => {
     const [selectedTech, setSelectedTech] = React.useState('All Projects');
@@ -46,7 +46,7 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">Min Portfolio</h1>
+            <h1 className="page-title">Projects</h1>
             <section className="portfolio-container-wrapper">
                 <section className="portfolio-container">
                     {filteredItems.map((item) => {
