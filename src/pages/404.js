@@ -23,7 +23,7 @@ const NotFound = ({ data }) => {
                 )}
 
 
-                <h1 className="page-title">{title || 'Sidan hittades inte'}</h1>
+                <h1 className="page-title">{title || 'Sidan hittades tyvärr inte'}</h1>
 
 
                 {body && (
