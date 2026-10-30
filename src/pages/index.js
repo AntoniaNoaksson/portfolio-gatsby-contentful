@@ -27,7 +27,7 @@ const IndexPage = () => {
     if (!page) {
         return (
             <Layout>
-                <p>Startsida laddas eller saknas...</p>
+                <p>Startsida laddas eller saknas....</p>
             </Layout>
         );
     }
