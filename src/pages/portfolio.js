@@ -74,7 +74,7 @@ const PortfolioPage = () => {
                                     </h2>
                                 </Link>
 
-                                {item.techStack && (
+                                {item.techStack &&  (
                                     <p className="page-body">
                                         <strong>Tech stack:</strong>{' '}
                                         {item.techStack.join(', ')}
