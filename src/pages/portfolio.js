@@ -10,7 +10,7 @@ const PortfolioPage = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            allContentfulProject(sort: { title: ASC }) {
+            allContentfulProject(sort:{ title: ASC }) {
                 nodes {
                     slug
                     title
